@@ -23,20 +23,29 @@ namespace SimpleCalculator
 
             void AskToContinue()
             {
-                Console.WriteLine("Would you like to continue? (Y)es or (N)o: ");
-                answer = Console.ReadLine();
+                var askToContinue = true;
 
-                if (answer == "yes" || answer == "y")
+                while (askToContinue == true)
                 {
-                    Console.Clear();
-                    isValid = true;
-                }
-                else if (answer == "no" || answer == "n")
-                    isValid = false;
-                else
-                {
-                    Console.WriteLine("You must enter yes or no...");
-                    AskToContinue();
+                    Console.WriteLine("Would you like to continue? (Y)es or (N)o: ");
+                    answer = Console.ReadLine();
+
+                    if (answer == "yes" || answer == "y")
+                    {
+                        Console.Clear();
+                        askToContinue = false;
+                        isValid = true;
+                    }
+                    else if (answer == "no" || answer == "n")
+                    {
+                        isValid = false;
+                        askToContinue = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You must enter yes or no...");
+                        askToContinue = true;
+                    }
                 }
             }
 
