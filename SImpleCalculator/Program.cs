@@ -15,8 +15,30 @@ namespace SimpleCalculator
 
             while (isValid == true)
             {
-                calculator.AskForNumbers();
-                calculator.CalculateAverage();
+                calculator.AskWhichMode();
+
+                if (calculator.choice == "1")
+                {
+                    calculator.AskForNumbers();
+                    calculator.AddNumbers();
+                }
+                else if (calculator.choice == "2")
+                {
+                    calculator.AskForNumbers();
+                    calculator.SubtractNumbers();
+                }
+                else if (calculator.choice == "3")
+                {
+                    calculator.AskForNumbers();
+                    calculator.CalculateAverage();
+                }
+                else
+                {
+                    Console.WriteLine("You must enter either a 1, 2 or 3 only please!");
+                    Console.ReadKey();
+                    Console.Clear();
+                    calculator.AskWhichMode();
+                }
                 AskToContinue();
 
             }
