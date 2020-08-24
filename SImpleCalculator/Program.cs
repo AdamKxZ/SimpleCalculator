@@ -6,7 +6,7 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Simple Calculator Program");
+            Console.WriteLine("Welcome to the Simple Calculator Program\n");
 
             Calculator calculator = new Calculator();
 

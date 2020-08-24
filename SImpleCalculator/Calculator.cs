@@ -16,9 +16,13 @@ namespace SimpleCalculator
 
         public void MainMenu()
         {
+            Console.WriteLine("|MAIN MENU|");
+            Console.WriteLine("-----------");
             Console.WriteLine("1. Sum");
             Console.WriteLine("2. Average");
+            Console.Write("Option: ");
             choice = Console.ReadLine();
+            Console.WriteLine();
         }
 
         public void AskForNumbers()
@@ -35,12 +39,14 @@ namespace SimpleCalculator
         {
             average = (num1 + num2 + num3) / 3;
             Console.WriteLine($"The average is {average}");
+            Console.WriteLine();
         }
 
         public void CalculateSum()
         {
             var sum = num1 + num2 + num3;
             Console.WriteLine($"The sum is {sum}");
+            Console.WriteLine();
         }
     }
 }
