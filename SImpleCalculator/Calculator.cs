@@ -11,6 +11,15 @@ namespace SimpleCalculator
         public double average { get; set; }
         public string answer { get; set; }
         public string isValid { get; set; }
+        public string choice { get; set; }
+
+
+        public void MainMenu()
+        {
+            Console.WriteLine("1. Sum");
+            Console.WriteLine("2. Average");
+            choice = Console.ReadLine();
+        }
 
         public void AskForNumbers()
         {
@@ -28,5 +37,10 @@ namespace SimpleCalculator
             Console.WriteLine($"The average is {average}");
         }
 
+        public void CalculateSum()
+        {
+            var sum = num1 + num2 + num3;
+            Console.WriteLine($"The sum is {sum}");
+        }
     }
 }

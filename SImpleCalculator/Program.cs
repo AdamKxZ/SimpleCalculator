@@ -15,9 +15,33 @@ namespace SimpleCalculator
 
             while (isValid == true)
             {
-                calculator.AskForNumbers();
-                calculator.CalculateAverage();
-                AskToContinue();
+                calculator.MainMenu();
+                bool menuValid = true;
+                while (menuValid == true)
+                {
+
+                    if (calculator.choice == "1")
+                    {
+                        calculator.AskForNumbers();
+                        calculator.CalculateSum();
+                        menuValid = false;
+                        AskToContinue();
+                    }
+                    else if (calculator.choice == "2")
+                    {
+                        calculator.AskForNumbers();
+                        calculator.CalculateAverage();
+                        menuValid = false;
+                        AskToContinue();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Response.");
+                        Console.ReadLine();
+                        Console.Clear();
+                        calculator.MainMenu();
+                    }
+                }
 
             }
 
