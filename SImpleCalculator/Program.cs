@@ -17,7 +17,7 @@ namespace SimpleCalculator
             {
                 calculator.MainMenu();
                 bool menuValid = true;
-                while (menuValid == true)
+                while (menuValid)
                 {
 
                     if (calculator.choice == "1")
@@ -68,7 +68,6 @@ namespace SimpleCalculator
                     else
                     {
                         Console.WriteLine("You must enter yes or no...");
-                        askToContinue = true;
                     }
                 }
             }
